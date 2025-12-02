@@ -1,0 +1,43 @@
+table {
+    margin: 0 auto;
+    width: auto;
+    height: auto;
+    background-color: #999999;
+    border-collapse: collapse;
+    border: 1px solid grey;
+    font-family: 'Segoe UI';
+    text-align: center;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+}
+table caption {
+    caption-side: top;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+th, td {
+  border: 1px solid grey;
+  padding: 6px;
+}
+th:first-child,
+td:first-child {
+  border-right: 3px solid black;
+}
+tr:first-child th:first-child,
+tr:first-child td:first-child {
+  border-right: 1px solid grey;
+}
+tr:first-child th:not(:first-child),
+tr:first-child td:not(:first-child) {
+  border-bottom: 3px solid black;
+}
+.webprog { background-color: #fff9b1; }
+.matek { background-color: #b1e3ff; }
+.progalap { background-color: #ffc0cb; }
+.logika { background-color: #c7f7b4; }
+.info { background-color: #ffd580; }
+.arch { background-color: #d7ffb1; }
+.tex { background-color: #f9b3b3; }
+.kutatas { background-color: #f7b1ff; }
+.empty { background-color: #f2f2f2; }
