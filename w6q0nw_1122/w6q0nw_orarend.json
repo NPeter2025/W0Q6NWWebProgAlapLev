@@ -1,0 +1,46 @@
+{
+    "w6q0nw_orarend": {
+        "ora": [
+            {
+                "targy":"Webprogramozás alapjai",
+                "idopont":{
+                    "dátum":"2025.11.22",
+                    "tol":10,
+                    "ig":12
+                },
+                "helyszin":"Inf. 124",
+                "oktato":"Dr. Bednarik László",
+                "szak":"G3BIW"
+            },
+             {
+                "targy":"Számítógép Architechtúrák",
+                "idopont":{
+                    "dátum":"2025.11.22",
+                    "tol":10,
+                    "ig":12
+                },
+                "helyszin":"Inf. 103",
+                "oktato":"Dr. Bednarik László",
+                "szak":"G3BIW"
+            }
+
+        ],
+        "cim":
+        {
+            "iranyitoszam" : 4080,
+            "varos": "Sárospatak",
+            "utca": "Eötvös utca 7."
+        },
+        "telefonszam":
+        [
+            {
+                "tipus":"Vezetekes",
+                "szam": "0647 513-000"
+            },
+            {
+                "tipus":"mobil",
+                "szam": "0670 555-4567"
+            }
+        ]
+    }
+}
