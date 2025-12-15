@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "nev": "Nadj Péter",
+    "munkakor": "Fejlesztő",
+    "elerhetoseg": {
+      "email": "nadjpeter@gmail.com",
+      "telefon": "+36-30-111-2222"
+    }
+  },
+  {
+    "id": 2,
+    "nev": "Nagy Anna",
+    "munkakor": "Designer",
+    "elerhetoseg": {
+      "email": "anna@pelda.hu",
+      "telefon": "+36-20-333-4444"
+    }
+  },
+  {
+    "id": 3,
+    "nev": "Szabó Péter",
+    "munkakor": "Projekt Menedzser",
+    "elerhetoseg": {
+      "email": "peter@pelda.hu",
+      "telefon": "+36-70-555-6666"
+    }
+  }
+]

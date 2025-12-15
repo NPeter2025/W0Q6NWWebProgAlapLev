@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vikingek rajongói weblap</title>
+
+    <link rel="stylesheet" href="./styles.css" />
+
+    <style>
+      body {
+        background-color: rgb(35, 35, 35);
+      }
+
+      h2 {
+        color: blue;
+      }
+      p {
+        color: white;
+        text-align: justify;
+        margin-right: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header"><img src="./letöltés.jpg" /></div>
+    <div class="grid">
+      <div class="menu">
+        <ul>
+          <li><a href="index.html">Főoldal</a></li>
+
+          <li><a href="Főszereplők.html">Főszereplők és jellemzésük</a></li>
+
+          <li><a href="Felfed.html">Felfedezések és hódítások</a></li>
+
+          <li>
+            <a href="történelem.html"
+              >A sorozat történelmi és hitelessége és fikciója</a
+            >
+          </li>
+
+          <li>
+            <a href="vallás.html">A kereszténység és pogány konfliktusa</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="content">
+        <h2>
+          <b><u>Bevezetés a sorozat cselekménye:</u></b>
+        </h2>
+        <p>
+          A "Vikingek" sorozat a <i>8. században</i> kezdődik, és
+          <b>Ragnar Lothbrok</b>, a legendás viking harcos és farmer
+          felemelkedését követi. <b>Ragnar</b> megszállottja annak az ötletnek,
+          hogy a megszokott <b>keleti portyák helyett nyugat felé</b>, az
+          ismeretlen óceánon át hajózzon új, gazdag földeket felfedezni. A
+          cselekmény <b>Ragnar lázadásával indul</b> a helyi <i>gróf</i> ellen,
+          új hajója megépítésével, és a keresztény <b>Anglia</b> (Lindisfarne)
+          meglepetésszerű meghódításával. A sorozat a továbbiakban bemutatja
+          Ragnar királyi címért folytatott harcait, a pogány és a keresztény
+          kultúra összecsapását, valamint fiait, akik apjuk halála után
+          továbbviszik a hódítás örökségét, elindítva a vikingek aranykorát.
+        </p>
+        <br />
+        <h3 style="color: blue">
+          <u>Ez egy kedv csináló előzetes a sorozathoz:</u>
+        </h3>
+        <video src="./videoplayback.mp4" controls>
+          Ez egy kedv csináló előzetes a sorozathoz!
+        </video>
+        <button id="lejatszasGomb"><b>Lejátszás/Szünet</b></button>
+
+        <script>
+          const video = document.querySelector("video");
+          const gomb = document.getElementById("lejatszasGomb");
+
+          gomb.addEventListener("click", () => {
+            if (video.paused) {
+              video.play();
+            } else {
+              video.pause();
+            }
+          });
+        </script>
+
+        <div class="footer">
+
+          <div id="eredmeny-doboz">
+        <p>Adatok betöltése...</p>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+    
+            $.ajax({
+                url: 'adatok.json', 
+                type: 'GET',        
+                dataType: 'json',   
+                success: function(adatok) {
+                  
+                    var htmlTartalom = '' 
+                    $.each(adatok, function(index, dolgozo) {
+                        htmlTartalom += '<div class="dolgozo-kartya">';
+                        htmlTartalom += '<h2>' + dolgozo.nev + '</h2>';
+                        htmlTartalom += '<p><strong>Munkakör:</strong> ' + dolgozo.munkakor + '</p>';
+                        
+                        htmlTartalom += '<p><strong>Email:</strong> ' + dolgozo.elerhetoseg.email + '</p>';
+                        htmlTartalom += '<p><strong>Telefon:</strong> ' + dolgozo.elerhetoseg.telefon + '</p>';
+                        htmlTartalom += '</div>';
+                    });
+
+                  
+                    $('#eredmeny-doboz').html(htmlTartalom);
+                },
+                error: function(xhr, status, error) {
+                  
+                    console.error("Hiba történt:", error);
+                    $('#eredmeny-doboz').html('<p style="color:red;">Hiba az adatok betöltésekor! (Ellenőrizd a konzolt)</p>');
+                }
+            });
+        });
+    </script>
+    
+          <form id="urlap" class="form" novalidate>
+    <h2>Regisztráció</h2>
+
+    <div class="form-csoport">
+        <label for="username">Felhasználónév</label>
+        <input type="text" id="username" placeholder="Írd be a neved">
+        <small>Hibaüzenet helye</small> </div>
+
+    <div class="form-csoport">
+        <label for="email">Email cím</label>
+        <input type="email" id="email" placeholder="pelda@email.com">
+        <small>Hibaüzenet helye</small>
+    </div>
+
+    <div class="form-csoport">
+        <label for="password">Jelszó</label>
+        <input type="password" id="password" placeholder="Jelszó">
+        <small>Hibaüzenet helye</small>
+    </div>
+
+    <button type="submit">Küldés</button>
+        </form>
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
