@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <!--
+  font-size: a gombon lévő szöveg mérete
+    background-color: a gomb háttérszíne
+    color: a gomb szövegének a színe
+    border-radius: a gomb sarkainak lekerekítése
+  -->
+  <body>
+    <a href="page2.html">
+      <button
+        style="
+          font-size: 25px;
+          background-color: grey;
+          color: blue;
+          border-radius: 10px;
+        "
+      >
+        Click me
+      </button>
+    </a>
+<br>
+<br>
+    <button
+       onclick="doSomething()"
+        style="
+          font-size: 25px;
+          background-color: grey;
+          color: blue;
+          border-radius: 10px;
+        "
+      >
+        Click me
+      </button>
+      <p id="greeting">Hello!</p>
+    <script>
+        function doSomething(){
+            document.getElementById("greeting").innerHTML = "Good bye!";
+        }
+    </script>
+  </body>
+</html>

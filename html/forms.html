@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<!--
+form: űrlap elemet jelöl, amely adatokat gyűjt a felhasználótól.
+action: meghatározza az URL-t, ahová az űrlap adatai elküldésre kerülnek.
+method: meghatározza az adatküldés módját (pl. GET (jelentéktelen adathoz használjuk) vagy POST(fontos adtahoz használjuk pl.: jelszó, felhasználó név stb.)).
+
+input: különböző típusú adatbeviteli mezőket hoz létre az űrlapon (pl.: szöveg, jelszó, rádiógomb, jelölőnégyzet stb.).
+type: meghatározza az input mező típusát (pl.: text, password, radio, checkbox stb.).
+-->
+<body>
+    <form action="index.php" method="post" enctype="multipart/form-data">
+
+        <label for="username">username:</label>
+        <input type="text" id="username" placeholder="Spongebob" minlength="6" maxlength="10" required>
+        <br>
+        <label for="password">password:</label>
+        <input type="password" id="password" minlength="8" maxlength="16">
+        <br>
+        <label for="email">email:</label>
+        <input type="email" id="email" placeholder="SSquarpants@gmail.com">
+        <br>
+        <label for="phone">phone:</label>
+        <input type="tel" id="phone" placeholder="06 20 123 4567" pattern="[0-9]{2} [0-9]{2} [0-9]{3} [0-9]{4}">
+        <br>
+        <label for="bday">birthday:</label>
+        <input type="date" id="bday">
+        <br>
+        <label for="quantity">quantity:</label>
+        <input type="number" id="quantity" min="0" max="99" value="1">
+        <br>
+        <label for="title">title:</label>
+        
+        <label for="Mr">Mr.:</label>
+        <input type="radio" id="Mr" value="Mr" name="title">
+        <label for="Mrs">Mrs.:</label>
+        <input type="radio" id="Mrs" value="Mrs" name="title">
+        <label for="Ms">Ms.:</label>
+        <input type="radio" id="Ms" value="Ms" name="title">
+        <label for="Dr">Dr.:</label>
+        <input type="radio" id="Dr" value="Dr" name="title">
+        <br>
+        <label for="payment">payment:</label>
+        <select>
+            <option value="visa">visa</option>
+            <option value="mastercard">mastercard</option>
+            <option value="cica">cica</option>
+        </select>
+        <br>
+        <label for="subscribe">subscribe</label>
+        <input type="checkbox" id="subscribe" checked>
+
+        <label for="comment">comment:
+        <textarea cols="25" rows="5" id="comment"></textarea>
+        </label>
+        <br>
+        <label for="file">file:</label>
+        <input type="file" id="file" accept="image/png, image/jpeg">
+        <br>
+        <input type="reset"><br>
+        <input type="submit">
+
+    </form>
+</body>
+</html>
