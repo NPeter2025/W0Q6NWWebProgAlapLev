@@ -1,0 +1,14 @@
+div {
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    display: none;
+    visibility: hidden;
+}
+span {
+    background-color: yellow;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+}
+/* display: none, block, inline, inline-block, visibility: hidden, visible */

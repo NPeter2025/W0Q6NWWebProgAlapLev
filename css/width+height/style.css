@@ -1,0 +1,21 @@
+*{
+    box-sizing: border-box;
+}
+.container{
+    background-color: grey;
+    height: 100vh;
+}
+.box{
+    background-color: white;
+    border: 2px solid;
+    padding: 25px;
+    box-sizing: border-box;
+    height: auto;
+    width: 50%;
+    float: left;
+    text-align: center;
+
+    min-height: 50%;
+}
+/* * = ez azt jelenti, hogy minden elemre vonatkozik ez a szabály */
+/* box-sizing: border-box = ez azt jelenti, hogy a padding és a border is
